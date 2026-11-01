@@ -65,7 +65,8 @@ CAMCE/
 │   ├── server.js
 │   └── package.json
 │
-│── summarization_api.py
+├── model/
+│   ├── camce_model.py
 │
 └── README.md
 ```
