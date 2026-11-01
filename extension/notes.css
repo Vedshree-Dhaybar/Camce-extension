@@ -1,0 +1,366 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: Arial, sans-serif;
+
+    background: #f5f7fa;
+    color: #222;
+}
+
+
+/* Main container */
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    padding: 30px;
+}
+
+
+/* Header */
+
+.header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+.header h1 {
+    margin: 0;
+
+    font-size: 28px;
+    color: #222;
+}
+
+.header p {
+    margin: 6px 0 0;
+
+    color: #666;
+    font-size: 14px;
+}
+
+
+/* Refresh button */
+
+.refresh-btn {
+    padding: 10px 18px;
+
+    border: none;
+    border-radius: 7px;
+
+    background: #2563eb;
+    color: white;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.refresh-btn:hover {
+    background: #1d4ed8;
+}
+
+
+/* Status */
+
+.status {
+    margin-bottom: 20px;
+
+    padding: 10px 15px;
+
+    background: white;
+
+    border: 1px solid #ddd;
+    border-radius: 7px;
+
+    font-size: 14px;
+
+    color: #555;
+}
+
+
+/* Notes container */
+
+.notes-container {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+
+/* Individual note */
+
+.note-card {
+    background: white;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    padding: 20px;
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+
+/* Note header */
+
+.note-header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: flex-start;
+
+    gap: 15px;
+
+    margin-bottom: 15px;
+}
+
+.note-number {
+    font-size: 16px;
+
+    font-weight: 700;
+
+    color: #2563eb;
+}
+
+.note-date {
+    font-size: 13px;
+
+    color: #777;
+
+    text-align: right;
+}
+
+
+/* Information */
+
+.note-info {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-bottom: 15px;
+}
+
+.info-item {
+    padding: 7px 10px;
+
+    background: #f1f5f9;
+
+    border-radius: 6px;
+
+    font-size: 13px;
+
+    color: #444;
+}
+
+
+/* Video URL */
+
+.video-url {
+    margin-bottom: 15px;
+
+    padding: 12px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 7px;
+}
+
+.video-url-title {
+    font-size: 12px;
+
+    font-weight: 700;
+
+    color: #555;
+
+    margin-bottom: 5px;
+}
+
+.video-url a {
+    color: #2563eb;
+
+    font-size: 13px;
+
+    text-decoration: none;
+
+    word-break: break-all;
+}
+
+.video-url a:hover {
+    text-decoration: underline;
+}
+
+
+/* Summary */
+
+.summary-title {
+    margin-bottom: 7px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    color: #333;
+}
+
+.summary {
+    padding: 14px;
+
+    background: #fafafa;
+
+    border-left: 4px solid #2563eb;
+
+    border-radius: 5px;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    color: #333;
+
+    white-space: pre-wrap;
+}
+
+
+/* Buttons */
+
+.note-actions {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 18px;
+}
+
+.open-btn,
+.delete-btn {
+    padding: 9px 15px;
+
+    border-radius: 6px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+/* Open video */
+
+.open-btn {
+    border: none;
+
+    background: #2563eb;
+
+    color: white;
+}
+
+.open-btn:hover {
+    background: #1d4ed8;
+}
+
+
+/* Delete */
+
+.delete-btn {
+    border: 1px solid #dc2626;
+
+    background: white;
+
+    color: #dc2626;
+}
+
+.delete-btn:hover {
+    background: #fef2f2;
+}
+
+
+/* Empty state */
+
+.empty-state {
+    display: none;
+
+    padding: 60px 20px;
+
+    text-align: center;
+
+    background: white;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+}
+
+.empty-state h2 {
+    margin: 0 0 8px;
+
+    font-size: 20px;
+}
+
+.empty-state p {
+    margin: 0;
+
+    color: #777;
+
+    font-size: 14px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .container {
+        padding: 20px;
+    }
+
+    .header {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    .header h1 {
+        font-size: 24px;
+    }
+
+    .note-header {
+        flex-direction: column;
+    }
+
+    .note-date {
+        text-align: left;
+    }
+
+    .note-actions {
+        flex-direction: column;
+    }
+
+    .open-btn,
+    .delete-btn {
+        width: 100%;
+    }
+}

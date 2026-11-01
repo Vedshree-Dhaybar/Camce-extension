@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>CAMCE Notes</title>
+
+    <link
+        rel="stylesheet"
+        href="popup.css"
+    >
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- ==================================
+             Header
+             ================================== -->
+
+        <h1>CAMCE Notes</h1>
+
+
+        <!-- ==================================
+             Platform
+             ================================== -->
+
+        <div id="platform">
+            Detecting platform...
+        </div>
+
+
+        <!-- ==================================
+             Duration
+             ================================== -->
+
+        <div class="duration-section">
+
+            <label for="durationSelect">
+                Select Duration
+            </label>
+
+            <select id="durationSelect">
+
+                <option value="60">
+                    1 min
+                </option>
+
+                <option
+                    value="120"
+                    selected
+                >
+                    2 min
+                </option>
+
+                <option value="300">
+                    5 min
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- ==================================
+             Time Range
+             ================================== -->
+
+        <div id="timeRange">
+            Time range: --:-- → --:--
+        </div>
+
+
+        <!-- ==================================
+             Extract Button
+             ================================== -->
+
+        <button id="extractBtn">
+            Extract Transcript
+        </button>
+
+
+        <!-- ==================================
+             Status
+             ================================== -->
+
+        <div id="status"></div>
+
+
+        <!-- ==================================
+             Transcript
+             ================================== -->
+
+        <div id="transcript"></div>
+
+
+        <!-- ==================================
+             Summary
+             ================================== -->
+
+        <div id="summarySection">
+
+            <h2>
+                English Summary
+            </h2>
+
+            <div id="summary">
+                Summary will appear here after
+                transcript extraction.
+            </div>
+
+        </div>
+
+
+        <!-- ==================================
+             MongoDB Save Status
+             ================================== -->
+
+        <div id="saveStatus"></div>
+
+
+        <!-- ==================================
+             View All Notes
+             ================================== -->
+
+        <button
+            id="viewNotesBtn"
+            class="secondary-btn"
+        >
+            View All Notes
+        </button>
+
+    </div>
+
+
+    <script src="popup.js"></script>
+
+</body>
+
+</html>
+

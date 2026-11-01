@@ -1,0 +1,409 @@
+
+/* ==========================================
+   Global
+   ========================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+
+    margin: 0;
+
+    padding: 0;
+
+    width: 360px;
+
+    font-family: Arial, sans-serif;
+
+    background: #f5f7fa;
+
+    color: #222;
+
+}
+
+
+/* ==========================================
+   Container
+   ========================================== */
+
+.container {
+
+    padding: 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+
+}
+
+
+/* ==========================================
+   Headings
+   ========================================== */
+
+h1 {
+
+    margin: 0;
+
+    font-size: 22px;
+
+    text-align: center;
+
+    color: #222;
+
+}
+
+
+h2 {
+
+    margin: 0 0 8px 0;
+
+    font-size: 17px;
+
+    color: #222;
+
+}
+
+
+/* ==========================================
+   Platform
+   ========================================== */
+
+#platform {
+
+    padding: 8px 10px;
+
+    background: #eef2f7;
+
+    border-radius: 6px;
+
+    font-size: 13px;
+
+    color: #555;
+
+    text-align: center;
+
+}
+
+
+/* ==========================================
+   Duration
+   ========================================== */
+
+.duration-section {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+}
+
+
+.duration-section label {
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #333;
+
+}
+
+
+#durationSelect {
+
+    padding: 7px 10px;
+
+    min-width: 100px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 6px;
+
+    background: white;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    outline: none;
+
+}
+
+
+#durationSelect:focus {
+
+    border-color: #4a90e2;
+
+}
+
+
+/* ==========================================
+   Time Range
+   ========================================== */
+
+#timeRange {
+
+    padding: 10px;
+
+    background: #ffffff;
+
+    border: 1px solid #ddd;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+
+    text-align: center;
+
+    color: #444;
+
+}
+
+
+/* ==========================================
+   Extract Button
+   ========================================== */
+
+#extractBtn {
+
+    width: 100%;
+
+    padding: 11px 15px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: background 0.2s ease;
+
+}
+
+
+#extractBtn:hover {
+
+    background: #1d4ed8;
+
+}
+
+
+#extractBtn:disabled {
+
+    background: #9ca3af;
+
+    cursor: not-allowed;
+
+}
+
+
+/* ==========================================
+   Status
+   ========================================== */
+
+#status {
+
+    min-height: 18px;
+
+    font-size: 13px;
+
+    color: #555;
+
+    text-align: center;
+
+}
+
+
+/* ==========================================
+   Transcript
+   ========================================== */
+
+#transcript {
+
+    max-height: 250px;
+
+    overflow-y: auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+}
+
+
+.transcript-paragraph {
+
+    padding: 12px;
+
+    background: white;
+
+    border: 1px solid #e1e1e1;
+
+    border-radius: 6px;
+
+}
+
+
+.transcript-paragraph .text {
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    color: #333;
+
+    text-align: left;
+
+}
+
+
+/* ==========================================
+   Summary Section
+   ========================================== */
+
+#summarySection {
+
+    display: block;
+
+    margin-top: 4px;
+
+}
+
+
+/* ==========================================
+   Summary Box
+   ========================================== */
+
+#summary {
+
+    padding: 14px;
+
+    background: white;
+
+    border: 1px solid #d9d9d9;
+
+    border-radius: 7px;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    color: #333;
+
+    max-height: 250px;
+
+    overflow-y: auto;
+
+    white-space: pre-wrap;
+
+}
+
+
+/* ==========================================
+   Save Status
+   ========================================== */
+
+#saveStatus {
+
+    min-height: 18px;
+
+    text-align: center;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+}
+
+
+/* ==========================================
+   View Notes Button
+   ========================================== */
+
+.secondary-btn {
+
+    width: 100%;
+
+    padding: 10px 15px;
+
+    border: 1px solid #2563eb;
+
+    border-radius: 7px;
+
+    background: white;
+
+    color: #2563eb;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+}
+
+
+.secondary-btn:hover {
+
+    background: #eff6ff;
+
+}
+
+
+/* ==========================================
+   Scrollbars
+   ========================================== */
+
+#transcript::-webkit-scrollbar,
+#summary::-webkit-scrollbar {
+
+    width: 6px;
+
+}
+
+
+#transcript::-webkit-scrollbar-track,
+#summary::-webkit-scrollbar-track {
+
+    background: #f1f1f1;
+
+}
+
+
+#transcript::-webkit-scrollbar-thumb,
+#summary::-webkit-scrollbar-thumb {
+
+    background: #bbb;
+
+    border-radius: 10px;
+
+}
+
+
+#transcript::-webkit-scrollbar-thumb:hover,
+#summary::-webkit-scrollbar-thumb:hover {
+
+    background: #999;
+
+}
+

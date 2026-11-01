@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CAMCE - All Notes</title>
+
+    <link rel="stylesheet" href="notes.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header class="header">
+            <div>
+                <h1>CAMCE Notes</h1>
+                <p>All your saved lecture notes</p>
+            </div>
+
+            <button id="refreshBtn" class="refresh-btn">
+                ↻ Refresh
+            </button>
+        </header>
+
+
+        <div id="status" class="status">
+            Loading notes...
+        </div>
+
+
+        <div id="notesContainer" class="notes-container">
+            <!-- Notes will be inserted here -->
+        </div>
+
+
+        <div id="emptyState" class="empty-state">
+            <h2>No Notes Found</h2>
+            <p>
+                Your saved CAMCE notes will appear here.
+            </p>
+        </div>
+
+    </div>
+
+    <script src="notes.js"></script>
+
+</body>
+</html>
